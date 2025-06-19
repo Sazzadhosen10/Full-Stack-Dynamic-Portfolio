@@ -46,9 +46,9 @@
 
   <section class="about">
     <div class="services">
-      <div><img src="icon1.png" alt="">Website Development</div>
-      <div><img src="icon2.png" alt="">App Development</div>
-      <div><img src="icon3.png" alt="">Website Hosting</div>
+      <div><img src="{{ asset('assets/image/website1.png') }}">Website Development</div>
+      <div><img src="{{ asset('assets/image/app.png') }}">App Development</div>
+      <div><img src="{{ asset('assets/image/webhost.png') }}">Website Hosting</div>
     </div>
     <div class="about-me">
       <h3>About me</h3>
