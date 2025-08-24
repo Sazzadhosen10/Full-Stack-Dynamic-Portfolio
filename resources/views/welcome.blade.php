@@ -31,12 +31,11 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="intro">
-                <p class="greeting">Hello,</p>
-                <h1>I am <span class="highlight">Sazzad</span></h1>
-                <h2>Junior Software Developer</h2>
+                <p class="greeting">{{ $info->hero_greeting ?? 'Hello,' }}</p>
+                <h1>I am <span class="highlight">{{ $info->hero_name ?? 'Sazzad' }}</span></h1>
+                <h2>{{ $info->hero_title ?? 'Junior Software Developer' }}</h2>
                 <p class="description">
-                    Passionate about creating innovative solutions and building amazing web experiences.
-                    I love turning ideas into reality through clean, efficient code.
+                    {{ $info->hero_description ?? 'Passionate about creating innovative solutions and building amazing web experiences. I love turning ideas into reality through clean, efficient code.' }}
                 </p>
                 <div class="buttons">
                     <button class="btn primary">
@@ -51,7 +50,8 @@
             </div>
             <div class="profile-section">
                 <div class="profile-pic">
-                    <img src="https://toppng.com/uploads/preview/cool-avatar-transparent-image-cool-boy-avatar-11562893383qsirclznyw.png" alt="Sazzad Profile" />
+                   <img src="{{ asset('assets/image/sazzad.jpeg') }}" alt="Sazzad Profile" />
+
                 </div>
             </div>
         </div>
@@ -139,10 +139,9 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2 class="section-title">About Me</h2>
+                    <h2 class="section-title">{{ $info->about_title ?? 'About Me' }}</h2>
                     <p>
-                        I started my software journey from photography. Through that, I learned to love the process of creating from scratch. 
-                        Since then, this has led me to software development as it fulfills my love for learning and building things.
+                        {{ $info->about_description ?? 'I started my software journey from photography. Through that, I learned to love the process of creating from scratch. Since then, this has led me to software development as it fulfills my love for learning and building things.' }}
                     </p>
                     <p>
                         As a junior software developer, I'm passionate about creating user-friendly applications and constantly learning new technologies. 
@@ -349,15 +348,15 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>sazzad@email.com</span>
+                            <span>{{ $info->contact_email ?? 'sazzad@email.com' }}</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>+880 123 456 789</span>
+                            <span>{{ $info->contact_phone ?? '+880 123 456 789' }}</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Dhaka, Bangladesh</span>
+                            <span>{{ $info->contact_address ?? 'Dhaka, Bangladesh' }}</span>
                         </div>
                     </div>
 
@@ -432,9 +431,9 @@
                 
                 <div class="footer-section">
                     <h4>Contact Info</h4>
-                    <p><i class="fas fa-envelope"></i> sazzad@email.com</p>
-                    <p><i class="fas fa-phone"></i> +880 123 456 789</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+                    <p><i class="fas fa-envelope"></i> {{ $info->contact_email ?? 'sazzad@email.com' }}</p>
+                    <p><i class="fas fa-phone"></i> {{ $info->contact_phone ?? '+880 123 456 789' }}</p>
+                    <p><i class="fas fa-map-marker-alt"></i> {{ $info->contact_address ?? 'Dhaka, Bangladesh' }}</p>
                 </div>
             </div>
             
